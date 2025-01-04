@@ -14,17 +14,17 @@ build:
     - ez_zarr = ez_zarr.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools
     - wheel
     - setuptools-scm
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - anndata
     - dask-core
     - numpy
@@ -41,6 +41,7 @@ test:
     - ez_zarr --help
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/fmicompbio/ez_zarr
