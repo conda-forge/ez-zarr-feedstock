@@ -1,5 +1,5 @@
 {% set name = "ez-zarr" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ez_zarr-{{ version }}.tar.gz
-  sha256: 62358b7d49594a1986023093f1e0fe79d7e9d30d2282e6b36afd0d4b469999bf
+  sha256: 0c2a3180e8c3fad74d4cecbd761264244825c744495931b56e563facf9f57fd1
 
 build:
   entry_points:
     - ez_zarr = ez_zarr.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
