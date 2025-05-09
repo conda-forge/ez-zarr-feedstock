@@ -1,5 +1,5 @@
 {% set name = "ez-zarr" %}
-{% set version = "0.3.7" %}
+{% set version = "0.3.8" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/ez_zarr-{{ version }}.tar.gz
-  sha256: 8820c2c0b901f60812f8186992e2facca4db9b1115090c806c1b1f5bbe80e180
+  sha256: 34a9a364a4b612223d1f8f67e42619bd2ca24de606cb0435eaf422364eed3382
 
 build:
   entry_points:
