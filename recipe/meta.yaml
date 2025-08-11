@@ -14,7 +14,7 @@ build:
     - ez_zarr = ez_zarr.__main__:main
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
@@ -32,6 +32,7 @@ requirements:
     - zarr
     - matplotlib-base
     - scikit-image
+    - rich
 
 test:
   imports:
